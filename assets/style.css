@@ -69,3 +69,27 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.timeblock{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  border-style: solid;
+  border-color: #000000;
+}
+
+.description{
+  display: flex;
+  min-width: 80%;
+}
+
+.past{
+  background-color: grey;
+}
+.present{
+  background-color: red;
+}
+.future{
+  background-color: green;
+}
