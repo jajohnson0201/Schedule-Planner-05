@@ -85,11 +85,14 @@ textarea {
 }
 
 .past{
-  background-color: grey;
+  background-color: rgb(202, 198, 198);
+  color: #000000;
 }
 .present{
-  background-color: red;
+  background-color: rgb(245, 129, 129);
+  color: #000000;
 }
 .future{
-  background-color: green;
+  background-color: rgb(168, 252, 168);
+  color: #000000;
 }

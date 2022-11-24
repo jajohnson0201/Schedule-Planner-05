@@ -25,7 +25,7 @@ setInterval(displayTime, 1000);
 
 console.log(scheduleContainer);
 console.log(scheduleContainer.children(0).children(0));
-console.log(timeBlock);
+console.log(timeBlock[5]);
 
 function getDescription(event){
     event.preventDefault();
@@ -34,14 +34,26 @@ function getDescription(event){
     console.log (btnClckdParent.children());
 }
 
-//  function getDescription(event){
-//      event.preventDefault();
 
-//     var btnClicked = $(event.target);
-//      var inputValue = description.val();
-//      description.text(inputValue);
-//  }
+function setTimeblockBackground(){
+    for(i = 0; i < timeBlock.length; i ++){
+    if(timeBlock[i].children[0].textContent === currentHour){
+        timeBlock.addClass('present');
+        timeBlock.removeClass('future');
+        timeBlock.removeClass('past');
+    } else if (timeBlock[i].children[0].textContent > currentHour){
+        timeBlock.addClass('future');
+        timeBlock.removeClass('present');
+        timeBlock.removeClass('past');
+    } else if (timeBlock[i].children[0].textContent < currentHour) {
+        timeBlock.addClass('past');
+        timeBlock.removeClass('present');
+        timeBlock.removeClass('future');
+    }
+}
+}
+setTimeblockBackground();
 
 timeBlock.on("click", getDescription);
 
-// timeBlock.on('submit', getDescription);
+
