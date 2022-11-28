@@ -35,31 +35,35 @@ var today = dayjs().format('dddd, MMMM D YYYY, h:mm:ss a');
 currentDay.text(today);
 }
 setInterval(displayTime, 1000);
-//console.log(nine);
+console.log(nine[0].children[1]);
 //console.log(scheduleContainer);
 //console.log(scheduleContainer.children[0].children(0));
 //console.log(timeBlock);
 
 function getDescription(event){
     event.preventDefault();
-    var storedTimeblocks = JSON.parse(localStorage.getItem("new-timeblock"));
-    console.log(storedTimeblocks);
+    // var storedTimeblocks = JSON.parse(localStorage.getItem("new-timeblock"));
+    // if (storedTimeblocks = null){
+    //     storedTimeblocks = [];
+    // }
+    // console.log(storedTimeblocks);
     var btnClicked = $(event.target);
     var btnClckdParent = btnClicked.parent();
     var textContent = btnClckdParent.children("textarea")[0].value;
     var selectedTimeblock = btnClckdParent[0].children[0].textContent;
-    var newObj = {
-        text: textContent,
-        timeSelected: selectedTimeblock,
-    }
-    var newTimeBlock = [];
-    newTimeBlock.push(storedTimeblocks);
-    newTimeBlock.push(newObj);
-    var results = newTimeBlock.filter(element => {
-        return element !== null;
-    });
-    console.log(results);
-    localStorage.setItem("new-timeblock", JSON.stringify(results));
+    // var newObj = {
+    //     text: textContent,
+    //     timeSelected: selectedTimeblock,
+    // }
+    // var newTimeBlock = [];
+    // var storedTimeBlockObj = storedTimeblocks[0];
+    // newTimeBlock.push(storedTimeBlockObj);
+    // newTimeBlock.push(newObj);
+    // var results = newTimeBlock.filter(element => {
+    //     return element !== null;
+    // });
+    // console.log(results);
+    localStorage.setItem(selectedTimeblock, JSON.stringify(textContent));
 
 // get the text area 
 //          filter on children (just for text area) e.g. x.children('textarea')
@@ -71,12 +75,47 @@ function getDescription(event){
     console.log(btnClicked);
     console.log(btnClckdParent[0].children[0].textContent);
     console.log (btnClckdParent.children("textarea")[0].value);
-    console.log(newTimeBlock);
+   // console.log(newTimeBlock);
 }
 
 function getSavedDescription(){
-    var pastTimeBlocks = JSON.parse(localStorage.getItem("new-timeblock"));
-    console.log(pastTimeBlocks);
+    var nineam = JSON.parse(localStorage.getItem("9am"));
+    var tenam = JSON.parse(localStorage.getItem("10am"));
+    var elevenam = JSON.parse(localStorage.getItem("11am"));
+    var twelvepm = JSON.parse(localStorage.getItem("12pm"));
+    var onepm = JSON.parse(localStorage.getItem("1pm"));
+    var twopm = JSON.parse(localStorage.getItem("2pm"));
+    var threepm = JSON.parse(localStorage.getItem("3pm"));
+    var fourpm = JSON.parse(localStorage.getItem("4pm"));
+    var fivepm = JSON.parse(localStorage.getItem("5pm"));
+    
+    if(nineam !== null){
+        nine[0].children[1].textContent = nineam
+    }
+    if(tenam !== null){
+        ten[0].children[1].textContent = tenam
+    }
+    if(elevenam !== null){
+        eleven[0].children[1].textContent = elevenam
+    }
+    if(twelvepm !== null){
+        twelve[0].children[1].textContent = twelvepm
+    }
+    if(onepm !== null){
+        one[0].children[1].textContent = onepm
+    }
+    if(twopm !== null){
+        two[0].children[1].textContent = twopm
+    }
+    if(threepm !== null){
+        three[0].children[1].textContent = threepm
+    }
+    if(fourpm !== null){
+        four[0].children[1].textContent = fourpm
+    }
+    if(fivepm !== null){
+        five[0].children[1].textContent = fivepm
+    }
     //var textAreaContent = pastTimeBlocks.text;
     //console.log(pastTimeBlocks.timeSelected);
     // for(var y = 0; y < pastTimeBlocks.length; y++){
