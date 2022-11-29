@@ -44,15 +44,15 @@ function getDescription(event){
 
 // sets saved descriptions for schedules timeblocks
 function getSavedDescription(){
-    var nineam = JSON.parse(localStorage.getItem("9am"));
-    var tenam = JSON.parse(localStorage.getItem("10am"));
-    var elevenam = JSON.parse(localStorage.getItem("11am"));
-    var twelvepm = JSON.parse(localStorage.getItem("12pm"));
-    var onepm = JSON.parse(localStorage.getItem("1pm"));
-    var twopm = JSON.parse(localStorage.getItem("2pm"));
-    var threepm = JSON.parse(localStorage.getItem("3pm"));
-    var fourpm = JSON.parse(localStorage.getItem("4pm"));
-    var fivepm = JSON.parse(localStorage.getItem("5pm"));
+    var nineam = JSON.parse(localStorage.getItem("9"));
+    var tenam = JSON.parse(localStorage.getItem("10"));
+    var elevenam = JSON.parse(localStorage.getItem("11"));
+    var twelvepm = JSON.parse(localStorage.getItem("12"));
+    var onepm = JSON.parse(localStorage.getItem("1"));
+    var twopm = JSON.parse(localStorage.getItem("2"));
+    var threepm = JSON.parse(localStorage.getItem("3"));
+    var fourpm = JSON.parse(localStorage.getItem("4"));
+    var fivepm = JSON.parse(localStorage.getItem("5"));
     
     if(nineam !== null){
         nine[0].children[1].textContent = nineam
