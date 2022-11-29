@@ -41,10 +41,9 @@ function getDescription(event){
     console.log(btnClckdParent[0].children[0].textContent);
     console.log (btnClckdParent.children("textarea")[0].value);
 }
-
 // sets saved descriptions for schedules timeblocks
 function getSavedDescription(){
-    var nineam = JSON.parse(localStorage.getItem("9"));
+    var nineam = JSON.parse(localStorage.getItem("09"));
     var tenam = JSON.parse(localStorage.getItem("10"));
     var elevenam = JSON.parse(localStorage.getItem("11"));
     var twelvepm = JSON.parse(localStorage.getItem("12"));
@@ -53,7 +52,8 @@ function getSavedDescription(){
     var threepm = JSON.parse(localStorage.getItem("3"));
     var fourpm = JSON.parse(localStorage.getItem("4"));
     var fivepm = JSON.parse(localStorage.getItem("5"));
-    
+    console.log(nineam);
+    console.log(localStorage.getItem('09'));
     if(nineam !== null){
         nine[0].children[1].textContent = nineam
     }
