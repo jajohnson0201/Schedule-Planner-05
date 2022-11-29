@@ -3,7 +3,7 @@
 
 
 ## Link
-website:  github: 
+website: https://jajohnson0201.github.io/Schedule-Planner-05/ github: https://github.com/jajohnson0201/Schedule-Planner-05
 
 ## Description
 The goal with this project was to start with a small amount of html and css, then add to the html and design a javascript file. This was to create a daily schedule planner that can be adjusted and the info on the page would be there when refreshed using local storage and event listeners. Also using web APIs to get info like current time and shorthand abilities for the page with jquery.
